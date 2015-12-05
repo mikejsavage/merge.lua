@@ -1,11 +1,11 @@
 if not arg[ 1 ] or not arg[ 2 ] then
-	print( arg[ 0 ] .. " <source directory> <path to main>" )
+	print( arg[ 0 ] .. " <source directory> <path to main> [Lua version]" )
 	os.exit( 1 )
 end
 
 local lfs = require( "lfs" )
 
-local merged = { "#! /usr/bin/env lua" }
+local merged = { "#! /usr/bin/env lua" .. arg[ 3 ] or "" }
 
 local root = arg[ 1 ]
 local main = arg[ 2 ]

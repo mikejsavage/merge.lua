@@ -6,13 +6,15 @@ executable.
 Usage
 =====
 
-	merge.lua [source directory] [entry point] > a.out
+	merge.lua src main.lua 5.1 > a.out
 	chmod +x a.out
 	./a.out
 
 has the same effect as:
 
-	cd [source directory]
-	lua [entry point]
+	cd src
+	lua5.1 main.lua
 
-You can also find a real usage example in [this Makefile][rssc].
+The version is optional, and the default is to just use `lua`.
+
+You can find a real usage example in [this Makefile][rssc].
