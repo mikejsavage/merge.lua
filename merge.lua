@@ -5,7 +5,7 @@ end
 
 local lfs = require( "lfs" )
 
-local merged = { "#! /usr/bin/lua" }
+local merged = { "#! /usr/bin/env lua" }
 
 local root = arg[ 1 ]
 local main = arg[ 2 ]
